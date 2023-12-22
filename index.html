@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PassWord Generator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1 class="heading">Password <span>Generator</span></h1>
+      <div class="resultContainer">
+        <div class="result">
+          <textarea
+            id="result"
+            class="resultTextArea"
+            spellcheck="false"
+            readonly
+          >
+          Click Generate
+            </textarea
+          >
+        </div>
+        <div class="userController">
+          <div class="checkboxController">
+            <div>
+              <input
+                type="checkbox"
+                name=""
+                id="letters"
+                checked
+                onchange="generateRandomPassword()"
+              />
+              <label for="letters">Letters</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name=""
+                id="numbers"
+                checked
+                onchange="generateRandomPassword()"
+              />
+              <label for="numbers">Numbers</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name=""
+                id="symbols"
+                checked
+                onchange="generateRandomPassword()"
+              />
+              <label for="symbols">Symbols</label>
+            </div>
+          </div>
+          <div class="rangeController">
+            <label for="length"> Length </label>
+            <input
+              type="range"
+              name=""
+              id="length"
+              max="30"
+              min="4"
+              value="8"
+            />
+            <p class="val">8</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn" id="generate">Generate</button>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
